@@ -1,0 +1,13 @@
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\bin\Debug\netcoreapp2.1\appsettings.json
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\bin\Debug\netcoreapp2.1\Worker.deps.json
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\bin\Debug\netcoreapp2.1\Worker.runtimeconfig.json
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\bin\Debug\netcoreapp2.1\Worker.runtimeconfig.dev.json
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\bin\Debug\netcoreapp2.1\Worker.dll
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\bin\Debug\netcoreapp2.1\Worker.pdb
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\obj\Debug\netcoreapp2.1\Worker.csprojAssemblyReference.cache
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\obj\Debug\netcoreapp2.1\Worker.AssemblyInfoInputs.cache
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\obj\Debug\netcoreapp2.1\Worker.AssemblyInfo.cs
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\obj\Debug\netcoreapp2.1\Worker.csproj.CoreCompileInputs.cache
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\obj\Debug\netcoreapp2.1\Worker.dll
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\obj\Debug\netcoreapp2.1\Worker.pdb
+D:\Temp\pruebas2\containers\example-voting-app\worker\dotnet\Worker\obj\Debug\netcoreapp2.1\Worker.genruntimeconfig.cache
