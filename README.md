@@ -8,12 +8,11 @@
 
 # Requirements summary
 
-- MacOS, Windows and Linux (Recommended)
-    - Install [Virtual Box](https://www.virtualbox.org) and [Vagrant](https://www.vagrantup.com)
-    - Install [Docker Desktop](https://www.docker.com/products/docker-desktop) for Windows and Mac or [Docker Engine](https://docs.docker.com/engine/install/) for Linux, or use [Docker Playground](https://labs.play-with-docker.com) if you want to avoid *Windows world* (Hyper-V, WSL, etc...)
-    - Register in [Docker Hub](https://hub.docker.com/signup)
+- Install [Virtual Box](https://www.virtualbox.org) and [Vagrant](https://www.vagrantup.com)
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop) for Windows and Mac or [Docker Engine](https://docs.docker.com/engine/install/) for Linux, or use [Docker Playground](https://labs.play-with-docker.com) if you want to avoid *Windows world* (Hyper-V, WSL, etc...)
+- Register in [Docker Hub](https://hub.docker.com/signup)
 
-All needed files can be download from [GitHub](https://github.com/ETSISI-CCforIoT/assignment1)
+All needed files can be download from this repository
 
 ---
 
