@@ -8,30 +8,28 @@
 
 # Requirements summary
 
-- Install [Virtual Box](https://www.virtualbox.org) and [Vagrant](https://www.vagrantup.com)
-- Install [Docker Desktop](https://www.docker.com/products/docker-desktop) for Windows and Mac or [Docker Engine](https://docs.docker.com/engine/install/) for Linux, or use [Docker Playground](https://labs.play-with-docker.com) if you want to avoid *Windows world* (Hyper-V, WSL, etc...)
-- Register in [Docker Hub](https://hub.docker.com/signup)
-
-All needed files can be download from this repository
-
----
-
-# Vagrant assignment
-### Assignment 1 (Part I)
-
-![bg left](https://cdn.thenewstack.io/media/2015/11/vagrant_header_background-482a12a7-1024x476.png)
-
----
-
-# Software Requirements
-
-- [Virtual Box](https://www.virtualbox.org)
-- [Vagrant](https://www.vagrantup.com)
+- Install [Virtual Box](https://www.virtualbox.org) 
+- Install [Vagrant](https://www.vagrantup.com)
     - for Windows 
         - **disable** Hyper-V
     - for Mac
     - for Linux
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop) 
+    - for Windows 
+        - **enable** WSL 2 (Recommended)
+        - or enable Hyper-V
+    - for Mac
+- Install [Docker Engine](https://docs.docker.com/engine/install/) for Linux
+- Or use [Docker Playground](https://labs.play-with-docker.com) if you want to avoid *Windows world* (Hyper-V, WSL, etc...)
+- Register in [Docker Hub](https://hub.docker.com/signup)
 
+- Account in DockerHub is required!
+
+> All needed files can be download from this repository
+
+---
+
+# Vagrant assignment
 ---
 
 - Initialize a directory for usage with Vagrant (project directory)
@@ -145,27 +143,9 @@ end
 
 # Docker assignment
 
-### Assignment 1 (Part II)
-
-![bg left 90%](https://deploybot.com/assets/blog/Using-Docker-Containersposting.png)
-
 ---
 
-# Software Requirements
-
-- [Docker Playground](https://labs.play-with-docker.com) 
-- [Docker Desktop](https://www.docker.com)
-    - for Windows 
-        - **enable** WSL 2 (Recommended)
-        - or enable Hyper-V
-    - for Mac
-- [Docker Engine] for Linux
-
-> Account in DockerHub is required!
-
----
-
-# Part I: Docker Images
+## Docker Images
 
 - Define a container with Dockerfile (file `Dockerfile`)
 
@@ -243,7 +223,7 @@ Note that the tag must be in format `user/image:number`
 
 ---
 
-# Part II: Docker Compose Services on Swarm
+## Docker Compose Services on Swarm
 
 - Define `docker-compose-service.yml` file
 
@@ -278,7 +258,7 @@ To delete the stack `docker stack rm webserver`
 To leave the swarm `docker swarm leave --force`
 
 ---
-# Part II: Docker Compose Stacks on Swarm
+## Docker Compose Stacks on Swarm
 
 ---
 
