@@ -307,5 +307,5 @@ volumes:
 To delete the stack `docker stack rm webapp`
 To leave the swarm `docker swarm leave --force`
 
-
+---
 Credits for https://github.com/docker-training/
