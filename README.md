@@ -1,12 +1,11 @@
 
-# Assignment 1 (course 2021-22)
-## Vagrant and Docker task
+# Assignment 1: Vagrant and Docker (course 2021-22)
 
 ![bg right:65% 100%](https://cdn.educba.com/academy/wp-content/uploads/2020/02/Vagrant-vs-Docker.jpg)
 
 ---
 
-# Requirements summary
+## Requirements summary
 
 - Install [Virtual Box](https://www.virtualbox.org) 
 - Install [Vagrant](https://www.vagrantup.com)
@@ -30,7 +29,7 @@
 ---
 
 # Vagrant assignment
----
+
 
 - Initialize a directory for usage with Vagrant (project directory)
 ```sh
@@ -142,8 +141,6 @@ end
 ---
 
 # Docker assignment
-
----
 
 ## Docker Images
 
@@ -259,8 +256,6 @@ To leave the swarm `docker swarm leave --force`
 
 ---
 ## Docker Compose Stacks on Swarm
-
----
 
 - Define `docker-compose-stack.yml` file
 ```yaml
