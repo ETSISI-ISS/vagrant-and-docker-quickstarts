@@ -287,7 +287,7 @@ services:
         networks: 
             - webnet
     redis:
-        image: redis:4.0.5-alpine
+        image: redis:alpine
         command: ["redis", "--appendonly", "yes"]
         hostname: redis
         networks:
