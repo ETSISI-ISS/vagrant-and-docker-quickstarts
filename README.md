@@ -225,25 +225,25 @@ Note that the tag must be in format `user/image:number`
 - Define `docker-compose-service.yml` file
 
 ```yaml
-version: "3" 
+version: "3"
 services:
-    web:    
-        image: <put here your user/image:number>
-        deploy:
-            replicas: 5 
-            resources:
-                limits:
-                    cpus: "0.1" 
-                    memory: 50M
-            restart_policy: 
-                condition: on-failure
-        ports:
-            - "8080:80"
-        networks: 
-            - webnet
-
-networks: 
-    webnet:
+  web:
+    # replace username/repo:tag with your name and image details
+    image: user/image:number
+    deploy:
+      replicas: 5
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:80"
+    networks:
+      - webnet
+networks:
+  webnet:
 ```
 
 ---
@@ -259,45 +259,46 @@ To leave the swarm `docker swarm leave --force`
 
 - Define `docker-compose-stack.yml` file
 ```yaml
-version: "3" 
+version: "3"
 services:
-    web:    
-        image: <put here your user/image:number>
-        deploy:
-            replicas: 5 
-            resources:
-                limits:
-                    cpus: "0.1" 
-                    memory: 50M
-            restart_policy: 
-                condition: on-failure
-        ports:
-            - "8080:80"
-        networks: 
-            - webnet
-    visualizer:
-        image: dockersamples/visualizer:stable 
-        ports:
-            - "8090:8080" 
-        volumes:
-            - "/var/run/docker.sock:/var/run/docker.sock" 
-        deploy:
-            placement:
-                constraints: [node.role == manager]
-        networks: 
-            - webnet
-    redis:
-        image: redis:alpine
-        command: ["redis", "--appendonly", "yes"]
-        hostname: redis
-        networks:
-            - webnet 
-        volumes:
-            - redis-data:/data 
+  web:
+    # replace username/repo:tag with your name and image details
+    image: user/image:number
+    deploy:
+      replicas: 5
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+    ports:
+      - "80:80"
+    networks:
+      - webnet
+  visualizer:
+    image: dockersamples/visualizer:stable
+    ports:
+      - "8090:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - webnet
+  redis:
+    image: redis:alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    hostname: redis
+    networks:
+      - webnet
+    volumes:
+      - redis-data:/data
 networks:
-    webnet: 
+  webnet:
 volumes:
-    redis-data:
+  redis-data:
 ```
 
 ---
