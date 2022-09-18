@@ -1,5 +1,5 @@
 
-# Assignment 1: Vagrant and Docker (course 2021-22)
+# LAB1: Vagrant and Docker (course 2022-23)
 
 ![bg right:65% 100%](https://cdn.educba.com/academy/wp-content/uploads/2020/02/Vagrant-vs-Docker.jpg)
 
@@ -28,7 +28,7 @@
 
 ---
 
-# Vagrant assignment
+# Vagrant Lab
 
 
 - Initialize a directory for usage with Vagrant (project directory)
@@ -140,7 +140,7 @@ end
 > You should see a web page that is being served from the virtual machine that was automatically setup by Vagrant
 ---
 
-# Docker assignment
+# Docker Lab
 
 ## Docker Images
 
