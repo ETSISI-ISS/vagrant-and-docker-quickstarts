@@ -10,7 +10,7 @@
 - Install [Virtual Box](https://www.virtualbox.org) 
 - Install [Vagrant](https://www.vagrantup.com)
     - for Windows 
-        - **disable** Hyper-V
+        - **disable** Hyper-V (by default it is disabled)
     - for Mac
     - for Linux
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop) 
