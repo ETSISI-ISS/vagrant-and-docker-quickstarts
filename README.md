@@ -89,6 +89,7 @@ mkdir html
 ```sh
 Vagrant.configure("2") do |config|
   config.vm.box = " hashicorp/bionic64"
+  config.vm.box_download_options = {"ssl-revoke-best-effort" => true}
   config.vm.provision :shell, path: "bootstrap.sh"
 end
 ```
