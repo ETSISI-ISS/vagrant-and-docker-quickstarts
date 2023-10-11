@@ -52,6 +52,7 @@ vagrant box list
 ```sh
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/bionic64"
+  config.vm.box_download_options = {"ssl-revoke-best-effort" => true}
 end
 ```
 ---
@@ -66,7 +67,7 @@ vagrant up
 ```sh
 vagrant ssh
 ```
-- In your Vagrant project directoy (local machine), create an HTML directory 
+- In your Vagrant project directory (local machine), create an HTML directory 
 ```sh
 mkdir html
 ```
