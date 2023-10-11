@@ -130,6 +130,7 @@ vagrant@vagrant:~$ wget -qO- 127.0.0.1
 ```sh
 Vagrant.configure("2") do |config|
   config.vm.box = "hashicorp/precise64"
+  config.vm.box_download_options = {"ssl-revoke-best-effort" => true}
   config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.network :forwarded_port, guest: 80, host: 4567
 end
