@@ -1,0 +1,54 @@
+# Define Vagrant configuration for multiple VMs
+Vagrant.configure("2") do |config|
+
+  # VM 1: Primary VM for Docker installation and container usage
+  config.vm.define "docker-vm" do |docker_vm|
+    # Base box (Ubuntu 20.04 LTS)
+    
+    # Set up private networking
+    docker_vm.vm.network "private_network", type: "dhcp"   
+	
+	# Assign VM resources
+    docker_vm.vm.provider "virtualbox" do |vb|
+      vb.memory = "2048"       # Set VM memory
+      vb.cpus = 2              # Set number of CPUs
+    end
+
+    # Provisioning: Installing Docker
+    docker_vm.vm.provision "shell", inline: <<-SHELL
+      # Update and install necessary packages
+      sudo apt-get update
+      sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+
+      # Add Docker’s official GPG key and repository
+      curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+      sudo add-apt-repository \
+        "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+      # Install Docker CE
+      
+
+      # Add 'vagrant' user to the Docker group to avoid using 'sudo'
+      sudo usermod -aG docker vagrant
+    SHELL
+
+    # Provisioning: Run a Docker container after Docker is installed
+    docker_vm.vm.provision "shell", inline: <<-SHELL
+		
+	  # Create a network: both your NGINX and MySQL containers need to be on the same Docker network to communicate using their container names as hostnames
+	  
+      # Run a Docker container Docker PHP-FPM 8.3 & Nginx 1.26 on Alpine Linux https://hub.docker.com/r/trafex/php-nginx
+      
+      # Run a second container (MySQL)
+
+    SHELL
+
+    # Sync a folder between the host and VM
+    docker_vm.vm.synced_folder "./app", "/var/www/html"
+
+    # Forward port 8081 on host to port 8080 on the guest
+    
+	# Forward port 3307 on host to port 3306 on the guest
+	
+  end  
+end
