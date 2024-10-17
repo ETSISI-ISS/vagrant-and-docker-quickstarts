@@ -1,5 +1,5 @@
 
-# LAB1: Vagrant and Docker (course 2022-23)
+# LAB1: Vagrant and Docker 
 
 ![bg right:65% 100%](https://cdn.educba.com/academy/wp-content/uploads/2020/02/Vagrant-vs-Docker.jpg)
 
@@ -36,9 +36,9 @@
 vagrant init
 ```
 
-- Store the box hashicorp/bionic64
+- Store the box ubuntu/focal64
 ```sh
-vagrant box add hashicorp/bionic64
+vagrant box add ubuntu/focal64
 ```
 
 - List your boxes
@@ -51,7 +51,7 @@ vagrant box list
 
 ```sh
 Vagrant.configure("2") do |config|
-  config.vm.box = "hashicorp/bionic64"
+  config.vm.box = "ubuntu/focal64"
   config.vm.box_download_options = {"ssl-revoke-best-effort" => true}
 end
 ```
@@ -88,7 +88,7 @@ mkdir html
 
 ```sh
 Vagrant.configure("2") do |config|
-  config.vm.box = " hashicorp/bionic64"
+  config.vm.box = "ubuntu/focal64"
   config.vm.box_download_options = {"ssl-revoke-best-effort" => true}
   config.vm.provision :shell, path: "bootstrap.sh"
 end
@@ -129,7 +129,7 @@ vagrant@vagrant:~$ wget -qO- 127.0.0.1
 
 ```sh
 Vagrant.configure("2") do |config|
-  config.vm.box = "hashicorp/precise64"
+  config.vm.box = "ubuntu/focal64"
   config.vm.box_download_options = {"ssl-revoke-best-effort" => true}
   config.vm.provision :shell, path: "bootstrap.sh"
   config.vm.network :forwarded_port, guest: 80, host: 4567
